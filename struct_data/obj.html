@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        const age = 'age'
+
+        // const user1 = ["Ivan", 25, 'M'];
+        // const user2 = ["Petr", 30, 'M'];
+        // const user3 = ["Olga", 23, 'F'];
+
+        function sayHello(_obj){
+            for(let key in _obj){
+                console.log(_obj[key])
+            }
+        }
+
+        // sayHello(user1[0], user1[1], user1[2]);
+
+        // const user4 = ["M", "Zhenya", 34];
+
+        // sayHello(user4[0], user4[1], user4[2]);
+       
+        const myName = 'a'
+
+        const obj = {
+            age: 34,
+            name: 'Zhenya',
+            gender: "M",
+            test: 'q'
+        };
+
+        sayHello(obj)
+
+        // console.log(obj[age])
+        // console.log(obj[myName + 'ge'])
+
+        
+    </script>
+    
+</body>
+</html>

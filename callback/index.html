@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const names = ['Ivan', 'Petr', 'Sidr'];
+
+        // names.forEach(function(name, index, arr){
+        //     console.log(`name ${name}`);
+        //     console.log(`index ${index}`);
+        //     console.log(`arr ${arr}`);
+        //     console.log(`===============`);
+        // })
+// forEach
+        names.forEach(
+            (name, index, arr) => {
+                // console.log(`name ${name}`);
+                // console.log(`index ${index}`);
+                // console.log(`arr ${arr}`);
+                // console.log(`===============`);
+            }
+        )
+// map
+        const objectNames = names.map(value => {
+            return {
+                name: value
+            } 
+        })
+
+// reduce
+
+        const numbers = [1,2,3,4,5]
+
+        const res = numbers.reduce(
+            (prev, curr) => {
+                return prev + curr
+            }, "" 
+        )
+
+
+        class Test {
+            static hello(){
+                console.log('hello')
+            }
+
+            run(){  
+                console.log('run')
+            }
+        }
+
+        const test1 = new Test();
+
+        const arr = [
+            {
+                word: 'test',
+                count: 5
+            }, 
+            {
+                word: 'hello',
+                count: 10
+            }
+        ]
+
+        arr.sort((a,b) => b.count - a.count)
+
+    </script>
+
+</body>
+</html>

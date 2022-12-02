@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function Car(color, model, maxSpeed, isFly){
+            this.color = color;
+            this.model = model;
+            this.maxSpees = maxSpeed;
+            this.fly = isFly;
+
+            this.start = function(){
+                console.log('car is strted')
+            }
+        }
+
+        Car.auth = function(){
+            console.log('user is auth')
+        }
+
+        // const bmw = {
+        //     color: 'black',
+        //     model: 7,
+        //     maxSpees: 320,
+        //     fly: true,
+        //     start: () => console.log('car is strted')
+        // }
+        // const bmw1 = {
+        //     color: 'black',
+        //     model: 7,
+        //     fly: false,
+        //     maxSpees: 320,
+        //     start: () => console.log('car is strted')
+        // }
+        // const bmw2 = {
+        //     color: 'black',
+        //     model: 7,
+        //     fly: true,
+        //     maxSpees: 320,
+        //     start: () => console.log('car is strted')
+        // }
+
+        const bmw = new Car('black', 7, 320, true);
+        const mers = new Car('white', 'S', 300, false);
+        const audi = new Car('red', 'A8', 280, true);
+
+        const test = {}
+        const test1 = new Object()    
+
+        bmw['hello'] = 'world'
+        bmw.test = 'test'
+
+        const a = 5
+        const a1 = new Number(5)
+
+        const str = 'hello';
+        const str1 = new String('hello');
+
+        function blabla(arg, arg1) {
+            if(typeof arg === 'string' && typeof arg1 === 'string' ){
+                return `${arg} ${arg1}`
+            }
+            if(typeof arg === 'number' && typeof arg1 === 'number' ){
+                return arg1 - arg
+            }
+        }
+        
+
+        blabla('hello', 'world')
+        blabla(5, 12)
+
+
+       
+    </script>
+
+</body>
+</html>
