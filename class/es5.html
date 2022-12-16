@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function Test(num){
+            this.test = num;
+            const a = 5;
+
+            this.b = 10;
+
+            this.sayHello = function(){
+                // console.log('hello', a)
+            }
+        }   
+
+        Test.hello = 'dkhfduf';
+
+        const test = new Test('hello');
+        test.sayHello(); 
+
+        function Man() {
+            this.eyesCount=2;
+
+            this.showEyes=function() {
+                    console.log(this);
+                    console.log('Eyes: '+this.eyesCount);
+                }
+        }
+
+        var man=new Man;
+        man.showEyes();
+
+    </script>
+    
+</body>
+</html>

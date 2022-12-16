@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // "use strict";
+
+        function test(str1, str2){
+            console.log(this.a);
+            console.log(str1);
+            console.log(str2);
+        }
+
+        const obj = {
+            a: 5
+        }
+
+        const obj2 = {
+            a: true
+        }
+
+        [].map(test());
+
+        console.log('========');
+        test.call(obj, 'hello', 'world');
+        console.log('========');
+        test.apply(obj2, ['111', '222']);
+        console.log('========');
+        const test1 = test.bind(obj2);
+        test1('333','444');
+
+    </script>
+
+</body>
+</html>
