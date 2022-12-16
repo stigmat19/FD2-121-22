@@ -16,6 +16,8 @@
             height: 10000px;
         }
 
+        [name='brand']
+
         [title='hello1'] {
             color: blue;
             font-size: 30px;
@@ -98,8 +100,24 @@
             }, '');
 
             app.innerHTML = res;
+
+            app.textContent = '<p>hello</p>'
         }
 
+
+        const pass = document.forms.form1.pass.value;
+        const name = document.forms.form1.name.value;
+
+        cars.push({
+            pass, name
+        })
+
+        const obj = {
+            pass: pass,
+            name: name
+        }
+
+        cars.push(obj)
     </script>
 </body>
 
