@@ -22,11 +22,21 @@
     <script>
         const app = document.querySelector('#app');
 
-        app.addEventListener('mousemove', (e) => {
-            console.log('clientX', e.clientX);
-            console.log('clientY', e.clientY);
-            console.log('=================')
-        })
+        app.addEventListener('click', (e) => {
+
+        });
+        app.addEventListener('click', function (e){
+            console.log('click2', e);
+            console.log('---------')
+        });
+
+        app
+       
+        function test1(){
+            console.log('click1')
+        }
+        
+        app.removeEventListener('click', test1);
     </script>
 </body>
 </html>

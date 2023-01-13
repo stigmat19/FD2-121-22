@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // const timer = setTimeout(() => {alert('hello')}, 1000);
+
+        // const interval = setInterval(() => {alert('test')}, 3000);
+
+        //==========================
+
+        console.log('----1');
+
+        setTimeout(() => console.log('-----2'), 0);
+
+        console.log('--------3');
+
+
+        //=========================
+
+
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => console.log(i), 0)
+        }
+
+        //===========================
+
+        class Clock {
+
+            constructor() {
+
+                var self = this;
+
+                this.timeName = "Минское время";
+
+                setInterval(function () {
+                    const currTime = new Date();
+                    console.log(self.timeName + " " + currTime);
+                }, 1000);
+
+            }
+
+        }
+
+        const clock = new Clock;
+
+
+    </script>
+
+</body>
+
+</html>
