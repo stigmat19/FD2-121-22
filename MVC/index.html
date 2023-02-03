@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    
+
+
+    <script>
+        //Model
+        const users = [
+            {
+                name: "Ivan",
+                age: 25
+            },
+            {
+                name: "Petr",
+                age: 30
+            },
+            {
+                name: "Sidr",
+                age: 35
+            }
+        ];
+
+        //Controller
+        function render(_users) {
+            let str = '';
+
+            _users.forEach(user => {
+                // View
+                str += buildHtmlStr(user)
+            });
+
+            document.getElementById('app').innerHTML = str
+        }    
+
+
+        function buildHtmlStr(data){
+           return `<div class="user">
+                        <p>Name: ${data.name}</p>
+                        <p>Age: ${data.age}</p>
+                    </div>`
+
+                    
+        }
+
+        render(users)
+        document.write('<p>hello</p>')
+    </script>
+    <a href="www.onliner.by/catalog/mobile?brand=samsung&"></a>
+    https://ab.onliner.by/bmw/x5/f15?body_type%5B0%5D=suv&engine_type%5B0%5D=diesel
+</body>
+</html>
