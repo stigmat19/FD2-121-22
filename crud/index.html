@@ -73,6 +73,12 @@
                 const response = await fetch(URL, { method: 'POST', body: sp })
                 const data = await response.json();
 
+                if(data.result === 'OK'){
+                    alert('Success');
+
+                    return;
+                }
+
                 return JSON.parse(data.result);
             } catch (err) {
                 alert(err)
