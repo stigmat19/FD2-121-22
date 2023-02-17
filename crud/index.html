@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="firstname"> <br>
+    <input type="text" name="lastname"> <br>
+    <input type="submit" value="send">
+
+
+    <script>
+
+        const firstname = document.querySelector('[name="firstname"]');
+        const lastname = document.querySelector('[name="lastname"]');
+        const sendBtn = document.querySelector('[value="send"]');
+        
+        const URL = 'https://fe.it-academy.by/AjaxStringStorage2.php';
+
+
+        sendBtn.addEventListener('click', () => {
+            const {value: firstName } = firstname;
+            const {value: lastName } = lastname;
+            const a = 5;
+            const user = {
+                firstName,
+                lastName
+            }
+            
+            console.log('user', user);
+
+            let sp = new URLSearchParams();
+            sp.append('f', 'INSERT');
+            sp.append('n', 'VAISIAKHOVICH_19880604');
+            sp.append('v', JSON.stringify(user));
+
+            try{
+                fetch(URL, { method: 'POST', body: sp })
+                    .then(response => response.json())
+                    .then(data => console.log('data', data))
+            } catch(err){
+                alert(err)
+            }
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>test</h1>
+
+    <a href="www.onliner.by/www"></a>
+
+    <input type=button value='получить строку' onclick='getText()'>
+    <script>
+        
+        function getText() {
+            fetch("https://fe.it-academy.by/Examples/test.txt",
+                { method: 'get'})
+                .then(response => response.text())
+                .then(txt => { alert(txt) })
+                .catch(error => { alert('ошибка!\n' + error); });
+        }
+
+    </script>
+</body>
+
+</html>

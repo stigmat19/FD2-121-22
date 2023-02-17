@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type=button onclick='testLoadData()' value='загрузить текст'>
+
+<script src='https://fe.it-academy.by/JQ/jquery.js'></script>
+https://ab.onliner.by/bmw/5-seriya?body_type%5B0%5D=sedan&body_type%5B1%5D=universal&engine_type%5B0%5D=gasoline&engine_type%5B1%5D=diesel
+<script>
+
+    function testLoadData() {
+        $.ajax("https://fe.it-academy.by/Examples/test.txt",
+            { type:'GET', dataType:'html', success:dataLoaded, error:errorHandler }
+        );
+    }
+
+    function dataLoaded(data) {
+        console.log('загруженные через AJAX данные:');
+        console.log(data);
+
+        alert(data);
+    }
+
+    function errorHandler(jqXHR,statusStr,errorStr) {
+        console.log('jqXHR', jqXHR);
+        console.log('statusStr', statusStr);
+        console.log('errorStr', errorStr);
+        // alert(statusStr+' '+errorStr);
+    }
+
+</script>
+</body>
+</html>
